@@ -8,7 +8,7 @@ namespace ConsoleApp
 {
     public abstract class Vehicle
     {
-        private int _speed;
+        protected int _speed;
         public int Speed => _speed;
         public abstract void Move();
         public virtual void SpeedUp(int increment)

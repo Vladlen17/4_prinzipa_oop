@@ -16,5 +16,22 @@ namespace ConsoleApp
         {
             return "Мотоцикл";
         }
+        public override void SpeedUp(int increment)
+        {
+            _speed += increment;
+            Console.WriteLine("Скорость мотоцикла увеличена на " + increment + " км/ч");
+        }
+        public override void SpeedDown(int decrement)
+        {
+            if (_speed < decrement)
+            {
+                Console.WriteLine("Скорость мотоцикла не может быть ниже 0 км/ч");
+            }
+            else
+            {
+                _speed -= decrement;
+                Console.WriteLine("Скорость мотоцикла уменьшена на км/ч " + decrement + " до " + _speed + " км/ч");
+            }
+        }
     }
 }
